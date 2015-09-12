@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Github Trending",
+  "version": "0.1",
+	
+  "description": "This extension fetches current github trending",
+
+  "background": {"page": "background.html"},
+  "page_action": {
+    "name": "github_trending"
+  },
+  
+  "author": "Senthil Porunan <senthilraja39@gmail.com>",
+  "permissions": [ "https://github.com/", "storage" ],
+   "content_scripts": [{
+        "matches": ["https://www.github.com/","https://github.com/"],
+        "js": ["js/jquery-1.11.3.min.js","js/content.js"]
+    }],
+  "homepage_url": "http://www.toolitup.com"
+}
